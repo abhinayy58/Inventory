@@ -1,6 +1,5 @@
 const http = require('http');
 const dotenv = require('dotenv').config();
-const bodyParser = require('body-parser');
 const app = require('./app');
 const connect = require('./config/db.config');
 

@@ -1,5 +1,6 @@
 const bodyParser = require("body-parser");
 const express = require("express");
+const cookieParser = require("cookie-parser");
 const app = express();
 const userRoutes = require("./routes/userRoute");
 const errorHandler = require('./middleware/errorMiddleware')
@@ -9,6 +10,7 @@ const errorHandler = require('./middleware/errorMiddleware')
 // })
 // Middleware
 app.use(express.json());
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json())
 
